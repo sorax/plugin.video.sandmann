@@ -15,7 +15,10 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import urllib
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 
 try:
     import json
@@ -24,7 +27,7 @@ except ImportError:
 
 
 def getJsonFromUrl(url):
-    document = urllib.urlopen(url).read()
+    document = urlopen(url).read()
     return json.loads(document)
 
 

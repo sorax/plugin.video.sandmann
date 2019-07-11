@@ -1,2 +1,4 @@
+version 1.0.1:
+ * python3 compatibility
 version 1.0.0:
  * initial version
