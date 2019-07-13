@@ -20,10 +20,7 @@ try:
 except ImportError:
     from urllib2 import urlopen
 
-try:
-    import json
-except ImportError:
-    import simplejson as json
+import json
 
 
 def getJsonFromUrl(url):
