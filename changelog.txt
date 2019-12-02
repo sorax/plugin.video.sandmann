@@ -1,3 +1,5 @@
+version 1.0.3:
+ * fix images not loading (removed query param)
 version 1.0.2:
  * change json import
  version 1.0.1:

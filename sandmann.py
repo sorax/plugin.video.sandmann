@@ -33,8 +33,9 @@ def getTitle(content):
 
 
 def getImage(content, width):
-    image_url = content["bilder"][0]["schemaUrl"]
-    return image_url.replace("##width##", str(width))
+    schema_url = content["bilder"][0]["schemaUrl"]
+    image_url = schema_url.replace("##width##", str(width))
+    return image_url.replace("?mandant=ard", "")
 
 
 def getEpisodeUrl(content):
