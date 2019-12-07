@@ -16,6 +16,30 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "#30001"
+msgctxt "#30010"
 msgid "Preferred Quality"
-msgstr ""
+msgstr "Bevorzugte Qualität"
+
+msgctxt "#30020"
+msgid "Update"
+msgstr "Aktualisierung"
+
+msgctxt "#30030"
+msgid "Interval (in hours)"
+msgstr "Intervall (in Stunden)"
+
+#  msgctxt "#30101"
+#  msgid "Automatic"
+#  msgstr "Automatisch"
+
+msgctxt "#30102"
+msgid "Interval"
+msgstr "Intervall"
+
+msgctxt "#30103"
+msgid "On Start"
+msgstr "Nur beim Start"
+
+msgctxt "#30104"
+msgid "Manual"
+msgstr "Manuell"
