@@ -18,28 +18,32 @@ msgstr ""
 
 msgctxt "#30010"
 msgid "Preferred Quality"
-msgstr "Bevorzugte Qualität"
+msgstr ""
 
 msgctxt "#30020"
 msgid "Update"
-msgstr "Aktualisierung"
+msgstr ""
 
 msgctxt "#30030"
 msgid "Interval (in hours)"
-msgstr "Intervall (in Stunden)"
+msgstr ""
 
 #  msgctxt "#30101"
 #  msgid "Automatic"
-#  msgstr "Automatisch"
+#  msgstr ""
 
 msgctxt "#30102"
 msgid "Interval"
-msgstr "Intervall"
+msgstr ""
 
 msgctxt "#30103"
-msgid "On Start"
-msgstr "Nur beim Start"
+msgid "Manual"
+msgstr ""
 
 msgctxt "#30104"
-msgid "Manual"
-msgstr "Manuell"
+msgid "On Start"
+msgstr ""
+
+msgctxt "#30200"
+msgid "Update in progress"
+msgstr ""

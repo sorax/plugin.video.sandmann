@@ -22,7 +22,7 @@ msgstr "Bevorzugte Qualität"
 
 msgctxt "#30020"
 msgid "Update"
-msgstr "Aktualisierung"
+msgstr "Aktualisieren"
 
 msgctxt "#30030"
 msgid "Interval (in hours)"
@@ -37,9 +37,13 @@ msgid "Interval"
 msgstr "Intervall"
 
 msgctxt "#30103"
+msgid "Manual"
+msgstr "Manuell"
+
+msgctxt "#30104"
 msgid "On Start"
 msgstr "Nur beim Start"
 
-msgctxt "#30104"
-msgid "Manual"
-msgstr "Manuell"
+msgctxt "#30200"
+msgid "Update in progress"
+msgstr "Aktualisierung wird durchgeführt"
