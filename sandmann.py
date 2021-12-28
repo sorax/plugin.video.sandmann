@@ -17,12 +17,8 @@
 
 import json
 
-try:
-    from html.parser import HTMLParser
-    from urllib.request import urlopen
-except ImportError:
-    from HTMLParser import HTMLParser
-    from urllib2 import urlopen
+from html import unescape
+from urllib.request import urlopen
 
 import xbmcaddon
 
@@ -35,8 +31,7 @@ def getJsonFromUrl(url):
 
 
 def sanitize(text):
-    h = HTMLParser()
-    return h.unescape(text)
+    return unescape(text)
 
 
 def getTitle(content, dgs):
