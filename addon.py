@@ -74,7 +74,7 @@ def reload():
 
 
 if update == 0:
-    global refresh_timer
+    refresh_timer
     # xbmc.executebuiltin("Notification(%s, %s, %d, %s)" %
     #                     (addon_name, "Updating...", 5000, addon_icon))
     refresh_timer = Timer(interval * 60 * 60, reload)
