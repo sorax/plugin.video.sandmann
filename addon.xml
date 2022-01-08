@@ -11,13 +11,10 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Our Sandman</summary>
     <summary lang="de_DE">Unser Sandmännchen</summary>
-    <description lang="en_GB">The Sandman has been sending the children to bed in the evening for over 50 years. With a bedtime story that shouldn't upset, the show is a ritual every evening for 1 million children (and their parents) to end the day.</description>
     <description lang="de_DE">Seit über 50 Jahren schickt das Sandmännchen die Kinder abends ins Bett. Mit einer Gute-Nacht-Geschichte, die nicht aufregen soll, ist die Sendung allabendlich für 1 Million Kinder (und ihre Eltern) ein Ritual, um den Tag zu beenden.</description>
-    <disclaimer lang="en_GB">Videos from www.sandmann.de</disclaimer>
     <disclaimer lang="de_DE">Videos von www.sandmann.de</disclaimer>
-    <language>de en</language>
+    <language>de</language>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <website>https://www.sandmann.de</website>
