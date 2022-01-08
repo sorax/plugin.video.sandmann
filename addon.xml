@@ -24,8 +24,8 @@
     <source>https://github.com/sorax/plugin.video.sandmann</source>
     <!--<news></news>-->
     <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+      <icon>resources/assets/icon.png</icon>
+      <fanart>resources/assets/fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
