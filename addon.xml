@@ -19,10 +19,12 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <website>https://www.sandmann.de</website>
     <source>https://github.com/sorax/plugin.video.sandmann</source>
-    <!--<news></news>-->
     <assets>
       <icon>resources/assets/icon.png</icon>
       <fanart>resources/assets/fanart.jpg</fanart>
     </assets>
+    <news>v2.0.0:
+      - complete rewrite for kodi 19 (aka matrix)
+    </news>
   </extension>
 </addon>
