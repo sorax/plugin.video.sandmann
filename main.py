@@ -18,4 +18,4 @@
 from libs.sandmann import sandmann
 
 if __name__ == '__main__':
-  sandmann()
+    sandmann()
