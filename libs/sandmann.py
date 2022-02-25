@@ -15,3 +15,66 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+import xbmc
+import xbmcaddon
+import xbmcgui
+import xbmcplugin
+
+import sys
+
+from libs.episodes import getEpisodes
+from threading import Timer
+
+# -- Addon --
+addon = xbmcaddon.Addon()
+addon_handle = int(sys.argv[1])
+addon_name = addon.getAddonInfo("name")
+addon_icon = addon.getAddonInfo("icon")
+
+base_path = sys.argv[0]
+
+# -- Constants --
+episodes_url = "https://appdata.ardmediathek.de/appdata/servlet/tv/Sendung?documentId=6503982&json"
+
+# -- Settings --
+dgs = addon.getSettingInt("dgs")
+interval = addon.getSettingInt("interval")
+quality = addon.getSettingInt("quality")
+update = addon.getSettingInt("update")
+
+# -- Variables --
+# refresh_timer = None
+
+
+def sandmann():
+    episodes_list = getEpisodes(episodes_url, quality)
+
+    item_list = []
+    for episode in episodes_list:
+        if dgs == 0 and episode["dgs"] == False:
+            item_list.append((episode["stream"], getListItem(episode), False))
+        if dgs == 1:
+            item_list.append((episode["stream"], getListItem(episode), False))
+        if dgs == 2 and episode["dgs"] == True:
+            item_list.append((episode["stream"], getListItem(episode), False))
+
+    xbmcplugin.addDirectoryItems(addon_handle, item_list, len(item_list))
+    xbmcplugin.endOfDirectory(addon_handle)
+
+
+def getListItem(item):
+    li = xbmcgui.ListItem(label=item["title"])
+    li.setArt({
+        "thumb": item["thumb"],
+        "fanart": item["fanart"]
+    })
+    li.setInfo(
+        type="video",
+        infoLabels={
+            "title": item["title"],
+            "plot": item["desc"],
+            "duration": item["duration"]
+        }
+    )
+    li.setProperty("IsPlayable", "true")
+    return li
