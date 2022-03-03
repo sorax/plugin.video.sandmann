@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import xbmc
+# import xbmc
 import xbmcaddon
 import xbmcgui
 import xbmcplugin
