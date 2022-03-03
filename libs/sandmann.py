@@ -59,6 +59,11 @@ def sandmann():
             item_list.append((episode["stream"], getListItem(episode), False))
 
     xbmcplugin.addDirectoryItems(addon_handle, item_list, len(item_list))
+
+    if update == 1:
+        li_refresh = xbmcgui.ListItem(label=addon.getLocalizedString(30020))
+        xbmcplugin.addDirectoryItem(addon_handle, base_path, li_refresh, True)
+
     xbmcplugin.endOfDirectory(addon_handle)
 
 
