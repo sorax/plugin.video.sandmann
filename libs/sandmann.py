@@ -37,10 +37,10 @@ base_path = sys.argv[0]
 episodes_url = "https://appdata.ardmediathek.de/appdata/servlet/tv/Sendung?documentId=6503982&json"
 
 # -- Settings --
-dgs = addon.getSettingInt("dgs")
-interval = addon.getSettingInt("interval")
-quality = addon.getSettingInt("quality")
-update = addon.getSettingInt("update")
+dgs = addon.getSettingInt("dgs2")
+interval = addon.getSettingInt("interval2")
+quality = addon.getSettingInt("quality2")
+update = addon.getSettingInt("update2")
 
 # -- Variables --
 # refresh_timer = None
