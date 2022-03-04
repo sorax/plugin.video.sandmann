@@ -17,7 +17,6 @@
 
 import json
 
-from html import unescape
 from urllib.request import urlopen
 
 
@@ -28,7 +27,7 @@ def getJsonFromUrl(url):
 
 def getEpisodes(episodes_url, quality):
     episodes_json = getJsonFromUrl(episodes_url)
-    episodes_list = episodes_json["sections"][0]["modCons"][1]["mods"][0]["inhalte"]
+    episodes_list = episodes_json["teasers"]
 
     item_list = []
     for episode in episodes_list:
@@ -38,67 +37,38 @@ def getEpisodes(episodes_url, quality):
 
 
 def getEpisodeData(data, quality):
-    episode_url = getEpisodeUrl(data)
-    stream_id = getStreamId(episode_url)
-    streams_url = "https://appdata.ardmediathek.de/appdata/servlet/play/media/" + stream_id
-    streams_data = getJsonFromUrl(streams_url)
-    mediaStreamArray = streams_data["_mediaArray"][0]["_mediaStreamArray"]
-    streams = {
-        0: mediaStreamArray[0]["_stream"],  # "auto"
-        1: mediaStreamArray[1]["_stream"],  # "128k"
-        2: mediaStreamArray[2]["_stream"][1],  # "256k"
-        3: mediaStreamArray[2]["_stream"][0],  # "512k"
-        4: mediaStreamArray[3]["_stream"][0],  # "1024k
-        5: mediaStreamArray[3]["_stream"][1]  # "1800k
-    }
+    episode_url = data["links"]["target"]["href"]
+    episode_details = getJsonFromUrl(episode_url)
+    streams_data = episode_details["widgets"][0]["mediaCollection"]["embedded"]["_mediaArray"][0]
+    mediaStreamArray = streams_data["_mediaStreamArray"]
 
-    description = getDescription(data)
-    dgs = getDgs(description)
+    streams = {
+        0: mediaStreamArray[4],
+        1: mediaStreamArray[5],
+        2: mediaStreamArray[1],
+        3: mediaStreamArray[2],
+        4: mediaStreamArray[0],
+        5: mediaStreamArray[3]
+    }
 
     return {
-        "desc": description,
-        "duration": getDuration(data),
+        "desc": getDescription(data),
+        "duration": "",
         "fanart": getImage(data, 1920),
-        "stream": streams[quality],
+        "stream": streams[quality]["_stream"],
         "thumb": getImage(data, 640),
-        "title": getTitle(data, dgs),
-        "dgs": dgs
+        "title": data["shortTitle"],
+        "dgs": getDgs(data["shortTitle"])
     }
-
-
-def getEpisodeUrl(content):
-    return content["link"]["url"]
-
-
-def getStreamId(episode_url):
-    url_path = episode_url.split("?")[0]
-    return url_path.split("/").pop()
 
 
 def getDescription(content):
-    return content["bilder"][0]["alt"].split(",")[0]
-
-
-def getDuration(content):
-    return int(content["unterzeile"].split(" ")[0])
+    return content["images"]["aspect16x9"]["alt"].split(" (Quelle:")[0]
 
 
 def getImage(content, width):
-    schema_url = content["bilder"][0]["schemaUrl"]
-    image_url = schema_url.replace("##width##", str(width))
-    return image_url.replace("?mandant=ard", "")
+    return content["images"]["aspect16x9"]["src"].replace("{width}", str(width))
 
 
-def getTitle(content, dgs):
-    outp = []
-    outp.append("Unser Sandmännchen vom")
-    outp.append(content["dachzeile"].split(" | ")[0])
-
-    if dgs == 1:
-        outp.append("(Gebärdensprache)")
-
-    return unescape(" ".join(outp))
-
-
-def getDgs(description):
-    return 'DGS-Logo' in description
+def getDgs(title):
+    return ' - mit Gebärdensprache' in title

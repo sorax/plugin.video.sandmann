@@ -15,7 +15,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# import xbmc
 import xbmcaddon
 import xbmcgui
 import xbmcplugin
@@ -23,7 +22,7 @@ import xbmcplugin
 import sys
 
 from libs.episodes import getEpisodes
-from threading import Timer
+
 
 # -- Addon --
 addon = xbmcaddon.Addon()
@@ -34,16 +33,13 @@ addon_icon = addon.getAddonInfo("icon")
 base_path = sys.argv[0]
 
 # -- Constants --
-episodes_url = "https://appdata.ardmediathek.de/appdata/servlet/tv/Sendung?documentId=6503982&json"
+episodes_url = "https://api.ardmediathek.de/page-gateway/widgets/ard/asset/Y3JpZDovL3JiYi1vbmxpbmUuZGUvc2FuZG1hbm4"
 
 # -- Settings --
 dgs = addon.getSettingInt("dgs2")
 interval = addon.getSettingInt("interval2")
 quality = addon.getSettingInt("quality2")
 update = addon.getSettingInt("update2")
-
-# -- Variables --
-# refresh_timer = None
 
 
 def sandmann():
