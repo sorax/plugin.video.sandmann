@@ -53,6 +53,7 @@ def getEpisodeData(data, quality):
 
     return {
         "desc": getDescription(data),
+        # "duration": getDuration(data),
         "duration": "",
         "fanart": getImage(data, 1920),
         "stream": streams[quality]["_stream"],
@@ -64,6 +65,10 @@ def getEpisodeData(data, quality):
 
 def getDescription(content):
     return content["images"]["aspect16x9"]["alt"].split(" (Quelle:")[0]
+
+
+# def getDuration(content):
+#     return int(content["duration"]) % 60
 
 
 def getImage(content, width):
