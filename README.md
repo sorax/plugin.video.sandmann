@@ -5,11 +5,6 @@ This is the repository for the _Kodi Sandmann Plugin_.
 This plugin enables you to access video content from
 [sandmann.de](http://www.sandmann.de) from within Kodi.
 
-## Version 2 (wip)
-
-I'm currently working on version 2 of this plugin.
-Feel free to get in touch, ask questions or discuss in the [issues section](https://github.com/sorax/plugin.video.sandmann/issues)
-
 ## Bugs
 
 If you find a bug, please submit it to GitHub's
