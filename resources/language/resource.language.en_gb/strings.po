@@ -16,6 +16,10 @@ msgstr ""
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "#30001"
+msgid "Settings"
+msgstr ""
+
 msgctxt "#30010"
 msgid "Preferred Quality"
 msgstr ""
