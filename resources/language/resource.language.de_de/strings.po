@@ -32,6 +32,10 @@ msgctxt "#30040"
 msgid "Sign Language"
 msgstr "Gebärdensprache"
 
+msgctxt "#30050"
+msgid "Source"
+msgstr "Quelle"
+
 #  msgctxt "#30101"
 #  msgid "Automatic"
 #  msgstr "Automatisch"
