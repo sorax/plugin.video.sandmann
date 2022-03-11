@@ -42,20 +42,15 @@ def getEpisodeData(data, quality):
     streams_data = episode_details["widgets"][0]["mediaCollection"]["embedded"]["_mediaArray"][0]
     mediaStreamArray = streams_data["_mediaStreamArray"]
 
-    streams = {
-        0: mediaStreamArray[4],
-        1: mediaStreamArray[5],
-        2: mediaStreamArray[1],
-        3: mediaStreamArray[2],
-        4: mediaStreamArray[0],
-        5: mediaStreamArray[3]
-    }
+    streams = {}
+    for stream in mediaStreamArray:
+        streams[stream["_quality"]] = stream["_stream"]
 
     return {
         "desc": getDescription(data),
         "duration": data["duration"],
         "fanart": getImage(data, 1920),
-        "stream": streams[quality]["_stream"],
+        "stream": getStream(streams, quality),
         "thumb": getImage(data, 640),
         "title": data["shortTitle"],
         "dgs": getDgs(data["shortTitle"])
@@ -68,6 +63,14 @@ def getDescription(content):
 
 def getImage(content, width):
     return content["images"]["aspect16x9"]["src"].replace("{width}", str(width))
+
+
+def getStream(streams, quality):
+    index = quality - 1
+    if index in streams:
+        return streams[index]
+    else:
+        return streams["auto"]
 
 
 def getDgs(title):
