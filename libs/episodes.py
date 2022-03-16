@@ -77,5 +77,4 @@ def getStream(streams, quality):
 
 
 def getDgs(title):
-    suffix = " - mit Gebärdensprache".decode("utf8")
-    return suffix in title
+    return "- mit Gebärdensprache" in title
