@@ -25,7 +25,7 @@ msgid "Preferred Quality"
 msgstr ""
 
 msgctxt "#30020"
-msgid "Update"
+msgid "Refresh"
 msgstr ""
 
 msgctxt "#30030"
