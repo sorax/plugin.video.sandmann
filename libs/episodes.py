@@ -17,7 +17,10 @@
 
 import json
 
-from urllib.request import urlopen
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 
 
 def getJsonFromUrl(url):
