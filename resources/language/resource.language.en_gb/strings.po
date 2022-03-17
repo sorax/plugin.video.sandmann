@@ -37,15 +37,15 @@ msgid "Sign Language"
 msgstr ""
 
 msgctxt "#30041"
-msgid "Without"
+msgid "no"
 msgstr ""
 
 msgctxt "#30042"
-msgid "With"
+msgid "both"
 msgstr ""
 
 msgctxt "#30043"
-msgid "Only"
+msgid "only"
 msgstr ""
 
 msgctxt "#30050"

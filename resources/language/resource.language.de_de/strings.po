@@ -37,16 +37,16 @@ msgid "Sign Language"
 msgstr "Gebärdensprache"
 
 msgctxt "#30041"
-msgid "Without"
-msgstr "Ohne"
+msgid "no"
+msgstr "ohne"
 
 msgctxt "#30042"
-msgid "With"
-msgstr "Mit"
+msgid "both"
+msgstr "mit"
 
 msgctxt "#30043"
-msgid "Only"
-msgstr "Nur"
+msgid "only"
+msgstr "nur"
 
 msgctxt "#30050"
 msgid "Source"
