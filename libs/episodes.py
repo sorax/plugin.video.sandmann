@@ -56,7 +56,7 @@ def getEpisodeData(data, quality):
         "stream": getStream(streams, quality),
         "thumb": getImage(data, 640),
         "title": data["shortTitle"],
-        "dgs": getDgs(data["shortTitle"])
+        "dgs": getDgs(data)
     }
 
 
@@ -76,5 +76,5 @@ def getStream(streams, quality):
         return streams["auto"]
 
 
-def getDgs(title):
-    return "- mit Gebärdensprache" in title
+def getDgs(content):
+    return "DGS-Logo" in content["images"]["aspect16x9"]["alt"]
