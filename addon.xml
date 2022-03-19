@@ -5,8 +5,8 @@
     version="2.1.0"
     provider-name="sorax">
   <requires>
-    <!--<import addon="xbmc.python" version="2.26.0"></import>-->
-    <import addon="xbmc.python" version="3.0.0"></import>
+    <import addon="xbmc.python" version="2.26.0"></import>
+    <!--<import addon="xbmc.python" version="3.0.0"></import>-->
   </requires>
   <extension point="xbmc.python.pluginsource" library="main.py">
     <provides>video</provides>
