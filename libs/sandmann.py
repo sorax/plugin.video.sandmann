@@ -84,7 +84,7 @@ def getListItem(item):
         infoLabels={
             "aired": item["date"],
             "duration": item["duration"],
-            "plotoutline": item["desc"],
+            "plot": item["desc"],
         }
     )
     li.setProperty("IsPlayable", "true")
