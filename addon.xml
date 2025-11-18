@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.sandmann" name="Sandmann" version="2.3.0" provider-name="sorax">
+<addon id="plugin.video.sandmann" name="Sandmann" version="2.3.1" provider-name="sorax">
   <requires>
     <import addon="xbmc.python" version="3.0.0"></import>
     <import addon="script.module.requests"/>
@@ -23,8 +23,8 @@
       <icon>resources/assets/icon.png</icon>
       <fanart>resources/assets/fanart.jpg</fanart>
     </assets>
-    <news>v2.3.0:
-      - performance improvements
+    <news>v2.3.1:
+      - fix urls for fetching episodes
     </news>
   </extension>
 </addon>
