@@ -36,8 +36,8 @@ base_path = sys.argv[0]
 
 # -- Constants --
 sources = {
-    "rbb": "https://api.ardmediathek.de/page-gateway/widgets/ard/asset/Y3JpZDovL3JiYi1vbmxpbmUuZGUvc2FuZG1hbm4?pageNumber=0&pageSize=18",
-    "mdr": "https://api.ardmediathek.de/page-gateway/widgets/ard/asset/Y3JpZDovL21kci5kZS9zZW5kZXJlaWhlbi84NjY2ZjI5OS02ZGU3LTQwNjMtODY4MS01NjA5ZWVlMzI4OGU"
+    "rbb": "https://api.ardmediathek.de/page-gateway/widgets/ard/editorials/3GuLb6bWPNyeenTBjK9u5l%3A7561660580516351848?pageNumber=0&pageSize=100",
+    "mdr": "https://api.ardmediathek.de/page-gateway/widgets/ard/editorials/3GuLb6bWPNyeenTBjK9u5l%3A7561660580516351848?pageNumber=0&pageSize=100"
 }
 
 
